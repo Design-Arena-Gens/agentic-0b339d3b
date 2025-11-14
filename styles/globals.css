@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html, body, #__next {
+  height: 100%;
+}
+
+body {
+  @apply bg-htb-black text-white;
+}
+
+.glass {
+  background: radial-gradient(1200px circle at var(--x,50%) var(--y,50%), rgba(102,255,102,0.08), transparent 25%), rgba(255,255,255,0.02);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(102,255,102,0.12);
+}
+
+.btn {
+  @apply inline-flex items-center justify-center rounded-md px-4 py-2 font-medium transition-colors;
+}
+.btn-primary {
+  @apply bg-htb-green text-black hover:bg-htb-accent;
+}
+.btn-ghost {
+  @apply border border-htb-green/30 text-htb-green hover:border-htb-green/60 hover:text-htb-accent;
+}
+.input {
+  @apply w-full rounded-md bg-htb-gray/60 border border-htb-green/20 focus:border-htb-green/60 focus:outline-none px-3 py-2 placeholder:text-white/40;
+}
+.card {
+  @apply glass rounded-xl shadow-glow;
+}
